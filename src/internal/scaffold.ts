@@ -12,7 +12,7 @@ const describePactWith = <
   P,
   W extends WrapperFn<O, P>
 >(
-  describeFn: jest.Describe,
+  describeFn: Mocha.ExclusiveSuiteFunction | Mocha.PendingSuiteFunction,
   wrapper: W
 ) => (options: O, tests: P) =>
   describeFn(describeString(options), () => wrapper(options, tests));

@@ -4,9 +4,13 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb-typescript-lite",
     "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:mocha/recommended"
   ],
-  "plugins": ["import"],
+  "plugins": ["import", "mocha"],
+  "env": {
+    "mocha": true
+  },
   "settings": {
     "import/resolver": {
       "typescript": {
@@ -23,23 +27,22 @@
     "no-console": "error",
     "import/prefer-default-export": "off",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "error"
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "mocha/no-setup-in-describe": "off",
+    "mocha/no-top-level-hooks": "off",
+    "mocha/no-exports": "off",
+    "prefer-arrow-callback": "off"
   },
 
   "overrides": [
     {
-      "files": ["**/*.test.ts", "**/*.spec.ts"],
-      "env": {
-        "jest": true
-      },
-      "plugins": ["jest"],
+      "files": ["**/*.test.ts", "**/*.spec.ts", "**/*.testOnly.ts"],
       "rules": {
         "no-unused-expressions": "off",
         "@typescript-eslint/no-explicit-any": "off",
-        "jest/no-disabled-tests": "warn",
-        "jest/no-focused-tests": "warn",
-        "jest/no-identical-title": "error",
-        "jest/prefer-to-have-length": "error"
+        "mocha/no-exports": "error",
+        "mocha/no-top-level-hooks": "error",
+        "func-names": "off"
       }
     },
     {

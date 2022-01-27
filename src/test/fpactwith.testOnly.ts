@@ -1,11 +1,11 @@
 import { fpactWith } from '../index';
 
-describe('fpactwith', () => {
+describe('fpactwith', function () {
   fpactWith({ consumer: 'MyConsumer', provider: 'NoProvider' }, () => {
-    it('should only run this test', () => {});
+    it('should only run this test', function () {});
   });
 
-  test('the test that should be skipped', () => {
+  it('the test that should be skipped', function () {
     throw new Error('this test should not be run');
   });
 });

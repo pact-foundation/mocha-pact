@@ -1,10 +1,10 @@
 import { xpactWith } from '../index';
 
-describe('xpactwith', () => {
+describe('xpactwith', function () {
   xpactWith({ consumer: 'MyConsumer', provider: 'NoOtherProvider' }, () => {
-    test('the test that should be skipped', () => {
+    it('the test that should be skipped', function () {
       throw new Error('tests inside xpactWith should not run');
     });
   });
-  test('this test should run', () => {});
+  it('this test should run', function () {});
 });

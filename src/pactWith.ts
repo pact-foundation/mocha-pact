@@ -4,14 +4,20 @@ import { WrapperFn } from './internal/types';
 import { withTimeout } from './internal/withTimeout';
 
 import { extendPactWith } from './internal/scaffold';
-import { JestPactOptions, JestProvidedPactFn } from './types';
+import { MochaPactOptions, JestProvidedPactFn } from './types';
 
-const setupProvider = (options: JestPactOptions): Pact => {
+const setupProvider = (options: MochaPactOptions): Pact => {
   const pactMock: Pact = new Pact(options);
 
-  beforeAll(() => pactMock.setup());
-  afterAll(() => pactMock.finalize());
-  afterEach(() => pactMock.verify());
+  before(function MochaPactSetup() {
+    return pactMock.setup();
+  });
+  after(function MochaPactTeardown() {
+    return pactMock.finalize();
+  });
+  afterEach(function MochaPactVerifyAfterEach() {
+    return pactMock.verify();
+  });
 
   return pactMock;
 };
@@ -23,7 +29,7 @@ export const getProviderBaseUrl = (provider: Pact): string =>
     : `http://${provider.opts.host}:${provider.opts.port}`;
 
 const pactWithWrapper = (
-  options: JestPactOptions,
+  options: MochaPactOptions,
   tests: JestProvidedPactFn
 ): void => {
   withTimeout(options, () => {
@@ -32,9 +38,9 @@ const pactWithWrapper = (
 };
 
 export const pactWith = extendPactWith<
-  JestPactOptions,
+  MochaPactOptions,
   JestProvidedPactFn,
-  WrapperFn<JestPactOptions, JestProvidedPactFn>
+  WrapperFn<MochaPactOptions, JestProvidedPactFn>
 >(pactWithWrapper);
 
 export const xpactWith = pactWith.skip;

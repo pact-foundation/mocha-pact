@@ -5,15 +5,15 @@ import { WrapperFn } from './internal/types';
 import { withTimeout } from './internal/withTimeout';
 
 import { extendPactWith } from './internal/scaffold';
-import { JestMessageConsumerOptions, JestProvidedMessagePactFn } from './types';
+import { MochaMessageConsumerOptions, ProvidedMessagePactFn } from './types';
 
 const setupMessageProvider = (
-  options: JestMessageConsumerOptions
+  options: MochaMessageConsumerOptions
 ): MessageConsumerPact => new MessageConsumerPact(options);
 
 const jestMessagePactWrapper = (
-  options: JestMessageConsumerOptions,
-  tests: JestProvidedMessagePactFn
+  options: MochaMessageConsumerOptions,
+  tests: ProvidedMessagePactFn
 ): void => {
   withTimeout(options, () => {
     tests(setupMessageProvider(applyMessagePactOptionDefaults(options)));
@@ -21,9 +21,9 @@ const jestMessagePactWrapper = (
 };
 
 export const messagePactWith = extendPactWith<
-  JestMessageConsumerOptions,
-  JestProvidedMessagePactFn,
-  WrapperFn<JestMessageConsumerOptions, JestProvidedMessagePactFn>
+  MochaMessageConsumerOptions,
+  ProvidedMessagePactFn,
+  WrapperFn<MochaMessageConsumerOptions, ProvidedMessagePactFn>
 >(jestMessagePactWrapper);
 
 export const xmessagePactWith = messagePactWith.skip;

@@ -1,13 +1,13 @@
 import { PactfileWriteMode } from '@pact-foundation/pact';
 import { LogLevel } from '@pact-foundation/pact/dsl/options';
 import * as path from 'path';
-import { JestMessageConsumerOptions, JestPactOptions } from '../types';
+import { MochaMessageConsumerOptions, MochaPactOptions } from '../types';
 
-const logHint = (options: JestPactOptions) =>
+const logHint = (options: MochaPactOptions) =>
   options.port ? `-port-${options.port}` : '';
 
 const applyCommonDefaults = (
-  options: JestPactOptions | JestMessageConsumerOptions
+  options: MochaPactOptions | MochaMessageConsumerOptions
 ) => ({
   log: path.resolve(
     options.logDir ? options.logDir : path.join(process.cwd(), 'pact', 'logs'),
@@ -23,16 +23,16 @@ const applyCommonDefaults = (
 });
 
 export const applyPactOptionDefaults = (
-  options: JestPactOptions
-): JestPactOptions => ({
+  options: MochaPactOptions
+): MochaPactOptions => ({
   ...applyCommonDefaults(options),
   spec: 2,
   ...options,
 });
 
 export const applyMessagePactOptionDefaults = (
-  options: JestMessageConsumerOptions
-): JestMessageConsumerOptions => ({
+  options: MochaMessageConsumerOptions
+): MochaMessageConsumerOptions => ({
   ...applyCommonDefaults(options),
   spec: 3,
   ...options,

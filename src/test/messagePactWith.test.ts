@@ -19,9 +19,9 @@ function dogApiHandler(dog: Dog): void {
 const { like, term } = Matchers;
 
 const arbitraryPact = (provider: MessageConsumerPact) => {
-  describe('receive dog event', () => {
-    it('accepts a valid dog', () =>
-      provider
+  describe('receive dog event', function () {
+    it('accepts a valid dog', function () {
+      return provider
         .given('some state')
         .expectsToReceive('a request for a dog')
         .withContent({
@@ -35,13 +35,14 @@ const arbitraryPact = (provider: MessageConsumerPact) => {
         .withMetadata({
           'content-type': 'application/json',
         })
-        .verify(synchronousBodyHandler(dogApiHandler)));
+        .verify(synchronousBodyHandler(dogApiHandler));
+    });
   });
 };
 
-describe('custom log locations', () => {
-  describe('with logDir', () => {
-    describe('without logFileName', () => {
+describe('custom log locations', function () {
+  describe('with logDir', function () {
+    describe('without logFileName', function () {
       messagePactWith(
         {
           consumer: 'MyMessageConsumer',
@@ -53,7 +54,7 @@ describe('custom log locations', () => {
         }
       );
     });
-    describe('with logFileName', () => {
+    describe('with logFileName', function () {
       messagePactWith(
         {
           consumer: 'MyMessageConsumer',
@@ -67,7 +68,7 @@ describe('custom log locations', () => {
       );
     });
   });
-  describe('with only logFileName', () => {
+  describe('with only logFileName', function () {
     messagePactWith(
       {
         consumer: 'MyMessageConsumer',
