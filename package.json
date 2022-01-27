@@ -8,15 +8,13 @@
     "lint:fix": "npm run lint -- --fix",
     "build": "rimraf dist && tsc --project tsconfig.dist.json",
     "test": "mocha && mocha --config .mocharc.only.json",
-    "dist:ci": "npm run lint && npm run test:ci && npm run build",
-    "dist:local": "npm run lint && npm run test && npm run build",
-    "deploy:prepare": "./scripts/create_npmrc_file.sh",
+    "dist": "npm run lint && npm run test && npm run build",
     "format:base": "prettier \"src/**/*.{ts,js}\"",
     "format:fix": "npm run format:base -- --write",
     "format:check": "npm run format:base -- --check",
+    "prerelease": "npm run dist:ci",
     "release": "standard-version",
-    "release:dryrun": "npm run test && npm publish --dry-run",
-    "release:publish": "npm run test && npm publish"
+    "release:dryrun": "npm run test && npm publish --dry-run"
   },
   "repository": {
     "type": "git",
