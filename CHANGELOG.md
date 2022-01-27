@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.1](https://github.com/pact-foundation/mocha-pact/compare/v0.10.0...v0.10.1) (2022-01-27)
+
+
+### Bug Fixes
+
+* Include the compiled code this time (previous release was broken) ([4118d0d](https://github.com/pact-foundation/mocha-pact/commit/4118d0dc2d7490d37018118aee4ee65b55ad1ff3))
+
 ## [0.10.0](https://github.com/pact-foundation/mocha-pact/compare/v0.9.1...v0.10.0) (2022-01-27)
 
 
