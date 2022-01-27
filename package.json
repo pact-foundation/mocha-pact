@@ -22,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/pact-foundation/mocha-pact.git"
   },
-  "author": "YOU54F",
+  "author": "Timothy Jones",
   "contributors": [
     {
       "name": "Yousaf Nabi",
@@ -35,9 +35,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pact-foundation/jest-pact/issues"
+    "url": "https://github.com/pact-foundation/mocha-pact/issues"
   },
-  "homepage": "https://github.com/pact-foundation/jest-pact/#readme",
+  "homepage": "https://github.com/pact-foundation/mocha-pact/#readme",
   "devDependencies": {
     "@commitlint/cli": "^10.0.0",
     "@commitlint/config-conventional": "^10.0.0",
