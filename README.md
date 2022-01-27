@@ -4,8 +4,6 @@
 ![npm](https://img.shields.io/npm/dm/mocha-pact.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4ad6c94892c6704253ca/maintainability)](https://codeclimate.com/github/pact-foundation/mocha-pact/maintainability)
 [![Coverage Status](https://coveralls.io/repos/github/pact-foundation/mocha-pact/badge.svg)](https://coveralls.io/github/pact-foundation/mocha-pact)
-[![Dependency Status](https://img.shields.io/david/pact-foundation/mocha-pact.svg?style=flat-square)](https://david-dm.org/pact-foundation/mocha-pact)
-[![devDependency Status](https://img.shields.io/david/dev/pact-foundation/mocha-pact.svg?style=flat-square)](https://david-dm.org/pact-foundation/mocha-pact#info=devDependencies)
 
 ## Mocha Adaptor to help write Pact files with ease
 
