@@ -142,4 +142,18 @@ describe('pactWith', function () {
       });
     });
   });
+  describe('with only logFileName', function () {
+    pactWith(
+      {
+        consumer: 'MyConsumer',
+        provider: 'pactWith4',
+      },
+      () => {
+        it('allows tests to return after 3 seconds', function (done) {
+          // The default in mocha is currently 2 seconds
+          setTimeout(() => done(), 3000);
+        });
+      }
+    );
+  });
 });
