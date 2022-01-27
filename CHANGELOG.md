@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/pact-foundation/mocha-pact/compare/v0.9.1...v0.10.0) (2022-01-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* This package is no longer compatible with Jest, but is now compatible with Mocha (it will be published as a new package, this note is really just for future readers of the changelog below here).
+
+### Features
+
+* Replace Jest with Mocha ([cb6959b](https://github.com/pact-foundation/mocha-pact/commit/cb6959bc470097dff1fbea5905bf9fdd5c8a3f04))
+
+
+### Bug Fixes
+
+* Correct the way the timeouts are given to Mocha ([a52dae6](https://github.com/pact-foundation/mocha-pact/commit/a52dae6c214833e53cad69bbc20825245ecc9c1c))
+
 ### [0.9.1](https://github.com/pact-foundation/jest-pact/compare/v0.9.0...v0.9.1) (2021-06-16)
 
 

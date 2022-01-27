@@ -1,6 +1,6 @@
 {
   "name": "mocha-pact",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "a pact adaptor for mocha",
   "main": "dist/index.js",
   "scripts": {
