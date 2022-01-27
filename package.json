@@ -12,7 +12,7 @@
     "format:base": "prettier \"src/**/*.{ts,js}\"",
     "format:fix": "npm run format:base -- --write",
     "format:check": "npm run format:base -- --check",
-    "prerelease": "npm run dist:ci",
+    "prerelease": "npm run dist",
     "release": "standard-version",
     "release:dryrun": "npm run test && npm publish --dry-run"
   },
