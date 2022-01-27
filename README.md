@@ -1,5 +1,6 @@
 # Mocha-Pact
 
+[![Build and test](https://github.com/pact-foundation/mocha-pact/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/pact-foundation/mocha-pact/actions/workflows/build-and-test.yml)
 [![npm version](https://badge.fury.io/js/mocha-pact.svg)](https://badge.fury.io/js/mocha-pact)
 ![npm](https://img.shields.io/npm/dm/mocha-pact.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4ad6c94892c6704253ca/maintainability)](https://codeclimate.com/github/pact-foundation/mocha-pact/maintainability)
