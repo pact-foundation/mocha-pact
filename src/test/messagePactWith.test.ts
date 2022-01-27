@@ -20,8 +20,8 @@ const { like, term } = Matchers;
 
 const arbitraryPact = (provider: MessageConsumerPact) => {
   describe('receive dog event', () => {
-    it('accepts a valid dog', () => {
-      return provider
+    it('accepts a valid dog', () =>
+      provider
         .given('some state')
         .expectsToReceive('a request for a dog')
         .withContent({
@@ -35,8 +35,7 @@ const arbitraryPact = (provider: MessageConsumerPact) => {
         .withMetadata({
           'content-type': 'application/json',
         })
-        .verify(synchronousBodyHandler(dogApiHandler));
-    });
+        .verify(synchronousBodyHandler(dogApiHandler)));
   });
 };
 

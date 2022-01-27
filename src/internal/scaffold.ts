@@ -23,7 +23,7 @@ export const extendPactWith = <
   W extends WrapperFn<O, P>
 >(
   wrapper: W
-) => {
+): WrapperWithOnlyAndSkip<O, P> => {
   const ret = describePactWith<O, P, W>(
     describe,
     wrapper
