@@ -58,7 +58,7 @@
     "husky": "4.2.3",
     "lint-staged": "10.2.2",
     "mocha": "^9.2.0",
-    "prettier": "2.0.5",
+    "prettier": "3.9.8",
     "rimraf": "3.0.2",
     "standard-version": "^9.0.0",
     "supertest": "4.0.2",
