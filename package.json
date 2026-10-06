@@ -39,7 +39,7 @@
   "devDependencies": {
     "@commitlint/cli": "^10.0.0",
     "@commitlint/config-conventional": "^10.0.0",
-    "@pact-foundation/pact": "9.12.2",
+    "@pact-foundation/pact": "9.18.1",
     "@pact-foundation/pact-js-prettier-config": "^1.0.0",
     "@types/expect.js": "^0.3.29",
     "@types/mocha": "^9.1.0",
