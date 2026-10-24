@@ -63,7 +63,7 @@
     "standard-version": "^9.0.0",
     "supertest": "4.0.2",
     "ts-node": "8.6.2",
-    "typescript": "3.8.3"
+    "typescript": "3.9.10"
   },
   "peerDependencies": {
     "@pact-foundation/pact": "^9.12.2",
